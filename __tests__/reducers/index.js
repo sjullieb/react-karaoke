@@ -25,10 +25,8 @@ describe("Karaoke App", () => {
 
     it("Should restart song", () => {
       expect(
-        lyricChangeReducer(initialState.songsById, {
-          type: "RESTART_SONG",
-          currentSongId: 1
-        })[1].arrayPosition
+        lyricChangeReducer(initialState.songsById, actions.restartSong(1))[1]
+          .arrayPosition
       ).toEqual(0);
     });
   });
@@ -42,11 +40,8 @@ describe("Karaoke App", () => {
 
     it("Should change selectedSong.", () => {
       expect(
-        songChangeReducer(initialState, {
-          type: "CHANGE_SONG",
-          newSelectedSongId: 1
-        })
-      ).toEqual(1);
+        songChangeReducer(initialState.currentSongId, actions.changeSong(2))
+      ).toEqual(2);
     });
   });
 
