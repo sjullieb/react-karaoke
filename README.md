@@ -10,8 +10,8 @@ _An application that shows the lyrics of a song line by line._
 
 ## Specifications
 
-- As a user, I want to enter search for a song by it's title.
-- As a user, I want a found song to be added in a list.
+- As a user, I want to enter a title of the song in search box.
+- As a user, if the song is found I want it to be added in a list.
 - As a user, I want to choose a song from a list with a first line of lyrics underneath.
 - As a user, I want to click on lyrics to see the next line.
 
@@ -20,6 +20,12 @@ _An application that shows the lyrics of a song line by line._
 - Download and install Node.js
 - Clone this repository: \$ git clone repo name
 - Change into the work directory: \$ cd repo name
+- Fill in the form to get API key https://developer.musixmatch.com/singup
+- Check a confirmation email to verify your account
+- Follow the link in the email to login,
+- Visit the Musixmatch Applications Dashboard to get your new API key
+- Create a file in the work directory: \$ touch .evn
+- Open the file in any editor, add the following line and save the file apiKey = YOUR UNIQUE API KEY GOES HERE
 - Run the command \$ npm install
 - Run the command \$ npm run start
 
@@ -35,6 +41,7 @@ _If you run into any issues or have questions, ideas or concerns. Please email m
 - Javascript
 - WebPack
 - Node Package Manager
+- Musixmatch API: https://developer.musixmatch.com
 
 ### License
 
