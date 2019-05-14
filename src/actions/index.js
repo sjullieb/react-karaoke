@@ -35,6 +35,8 @@ export function fetchSongId(title) {
           const musicMatchId = json.message.body.track_list[0].track.track_id;
           const artist = json.message.body.track_list[0].track.artist_name;
           const title = json.message.body.track_list[0].track.track_name;
+          console.log(musicMatchId, artist, title);
+
           fetchLyrics(title, artist, musicMatchId, localSongId, dispatch);
         } else {
           console.log("We couldn't locate a song under that ID!");
@@ -50,6 +52,7 @@ export function fetchLyrics(
   localSongId,
   dispatch
 ) {
+  console.log(musicMatchId);
   return fetch(
     "http://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=" +
       musicMatchId +
